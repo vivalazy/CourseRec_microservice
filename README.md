@@ -17,7 +17,7 @@
 Spring Cloud Config是用于分布式系统的水平可扩展的集中式配置服务。支持本地存储、Git和Subversion。本项目中使用的是本地配置文件，它从本地类路径加载配置文件。当通知服务请求配置时，配置服务以application.yml相应。
 
 #### API Gateway
-使用@EnableZuulProxy注释启用API网管。在这个项目中，使用ZUUL来存储静态内容，并将请求路由到适当的微服务。
+使用@EnableZuulProxy注释启用API网关。在这个项目中，使用ZUUL来存储静态内容，并将请求路由到适当的微服务。
 
 #### Service discovery
 服务发现允许自动检测服务实例的网络位置，由于自动扩展，故障和升级，可能会动态分配地址。服务发现的关键部分是注册表。本项目中使用Netflix Eureka。使用Spring Boot，可以使用spring-cloud-starter-eureka-server依赖关系，@EnableEurekaServer注释和简单配置属性来构建Eureka注册表。在应用程序启动时，它将注册到Eureka服务器并提供元数据，如主机和端口，运行状况指示器URL，主页等。Eureka从属于一个服务的每个实例接收心跳消息。如果心跳故障切换到可配置的时间表，则实例将从注册表中删除。此外，Eureka提供了一个界面可以跟踪运行的服务和可用实例数。
