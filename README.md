@@ -1,1 +1,1 @@
-# courseRec_microservice
+# CourseRec_microservice
