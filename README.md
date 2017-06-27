@@ -40,8 +40,8 @@
 | GET |  /previewrecom/{userid} | Get specified user preview course recommendation |          √         |       √          |
 | POST |  / recom |  Add new recommendation |        ×           |         ×        |
 
-#### Recommendation service
-提供针对每个用户的复习课程推荐和复习推荐课程。
+#### Record service
+提供用户学习和做题得分记录。
 
 |  Method  | Path |    Description    | User authenticated | Available from UI |
 | -------- |  --- | ----------------- | :-------------------: | :---------------: |
