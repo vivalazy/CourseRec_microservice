@@ -15,10 +15,43 @@
  
 #### User service
 包括用户信息的管理。
+
 |  Method  | Path |    Description    | User authenticated | Available from UI |
-| -------- |  --- | ----------------- | ------------------- | --------------- |
-| GET |  /users |  Get users information |                   |                 |
- 
+| -------- |  --- | ----------------- | :-------------------: | :---------------: |
+| GET |  /users |  Get users information |           √       |       √          |
+| GET |  /users/{id} |  Get specified user information |          √         |       √          |
+| POST |  /users |  Register new user |        ×           |         ×        |
+
+#### Course service
+包括课程信息的管理：系统中课程的ID、名称、种类。
+
+|  Method  | Path |    Description    | User authenticated | Available from UI |
+| -------- |  --- | ----------------- | :-------------------: | :---------------: |
+| GET |  /courses |  Get courses information |           √       |       √          |
+| GET |  /courses/{id} |  Get specified course information |          √         |       √          |
+| POST |  /courses |  Add new course |        ×           |         ×        |
+
+#### Recommendation service
+提供针对每个用户的复习课程推荐和复习推荐课程。
+
+|  Method  | Path |    Description    | User authenticated | Available from UI |
+| -------- |  --- | ----------------- | :-------------------: | :---------------: |
+| GET |  /reviewrecom/{userid} |  Get specified user review course recommendation |           √       |       √          |
+| GET |  /previewrecom/{userid} | Get specified user preview course recommendation |          √         |       √          |
+| POST |  / recom |  Add new recommendation |        ×           |         ×        |
+
+#### Recommendation service
+提供针对每个用户的复习课程推荐和复习推荐课程。
+
+|  Method  | Path |    Description    | User authenticated | Available from UI |
+| -------- |  --- | ----------------- | :-------------------: | :---------------: |
+| GET |  /record/{userid} |  Get specified user learning record |           √       |       √          |
+| POST |  / record |  Add new record |        ×           |         ×        |
+
+### UI service
+通过调用其它服务提供的接口，将数据展示在与用户交互的页面中。
+
+
 ### 3.	基础架构服务
  ![image](https://github.com/vivalazy/CourseRec_microservice/raw/master/screenshots/pic7.png)
 #### Config service
