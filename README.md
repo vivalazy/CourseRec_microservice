@@ -7,7 +7,13 @@
 本项目的名称为智能微课堂，随着在线教育平台的发展，越来越多的人选择通过慕课平台学习课程。然而从海量的课程中找到自己感兴趣的课程是一件比较困难的事，推荐系统不需要用户提供明确的需求，而是分析用户的历史行为给用户的兴趣建模，从而挖掘出用户的个性化需求。使用推荐系统为慕课学习者提供符合他的兴趣和知识水平的课程，有利于提高课程的完成度。
 
 本项目基于 “华师慕课”平台，“华师慕课”是面向中小学生的在线学习平台，这个平台中包括很多微视频资源，每个微视频讲一个知识点，用户可以针对知识点进行学习。我们所做的工作是为使用这个平台的用户推荐微视频。主要利用了平台固有的知识体系，以及后台用户的做题记录作为判断用户对知识掌握情况的依据。分别实现了对用户学习和做题记录的可视化、基于知识体系以及差异化教学理论对用户进行课程复习推荐、预习推荐。
+ ![image](https://github.com/vivalazy/CourseRec_microservice/raw/master/screenshots/pic1.png)
+ 
+ ![image](https://github.com/vivalazy/CourseRec_microservice/raw/master/screenshots/pic2.png)
 
+ ![image](https://github.com/vivalazy/CourseRec_microservice/raw/master/screenshots/pic3.png)
+ 
+ ![image](https://github.com/vivalazy/CourseRec_microservice/raw/master/screenshots/pic4.png)
 
 ### 2.	功能性服务
 本项目由五个核心微服务构成，如图1所示，每个微服务独立部署，运行在自己的进程中，连接独立的数据库。每个微服务有独立的数据库，所以不能够绕开API而直接访问其它微服务的数据。本项目中用HSQLDB数据库。HSQLDB数据库是一个轻量级的纯Java开发的开放源代码的关系数据库。服务与服务之间的通信通过REST API实现。
